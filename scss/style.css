@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #f7f5f5;
+}
+body main {
+  width: 75%;
+  margin: 80px auto;
+  display: grid;
+  grid-template-areas: "create create create social social social social social social schedule schedule schedule" "create create create social social social social social social schedule schedule schedule" "create create create account account account maintain maintain maintain schedule schedule schedule" "content-ai content-ai content-ai account account account maintain maintain maintain schedule schedule schedule" "content-ai content-ai content-ai audience audience audience follower follower follower follower follower follower" "content-ai content-ai content-ai audience audience audience follower follower follower follower follower follower";
+  gap: 25px;
+}
+body main .grid {
+  border-radius: 10px;
+  padding: 22px;
+}
+body main .social {
+  grid-area: social;
+  background-color: rgb(118, 80, 220);
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 32px;
+}
+body main .social h1 {
+  font-size: 46px;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+}
+body main .social h1 span {
+  color: rgb(255, 203, 107);
+}
+body main .social img {
+  display: block;
+  margin: 10px auto 7px;
+  width: 150px;
+}
+body main .social small {
+  display: block;
+  color: rgb(249, 238, 225);
+}
+body main .account {
+  grid-area: account;
+  background-color: #ffffff;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+body main .account div {
+  margin-bottom: 10px;
+  overflow-x: hidden;
+}
+body main .account div img {
+  width: 136%;
+}
+body main .account h2 {
+  font-size: 32px;
+  line-height: 0.9;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+  padding-right: 20px;
+}
+body main .maintain {
+  grid-area: maintain;
+  background-color: rgb(255, 203, 107);
+  padding-bottom: 0;
+}
+body main .maintain h2 {
+  font-size: 32px;
+  line-height: 0.9;
+  font-weight: 500;
+  letter-spacing: -2px;
+  margin-bottom: 18px;
+}
+body main .maintain div img {
+  width: 100%;
+}
+body main .schedule {
+  grid-area: schedule;
+  background-color: rgb(218, 207, 252);
+  padding: 40px 0px 40px 25px;
+}
+body main .schedule h2 {
+  font-size: 32px;
+  line-height: 0.9;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+  padding-right: 40px;
+}
+body main .schedule div {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  overflow-x: hidden;
+}
+body main .schedule div img {
+  display: block;
+  width: 160%;
+}
+body main .schedule p {
+  color: rgb(18, 18, 18);
+  line-height: 1.2;
+  font-weight: 500;
+  padding-right: 30px;
+}
+body main .follower {
+  grid-area: follower;
+  background-color: rgb(118, 80, 220);
+  display: flex;
+  align-items: center;
+}
+body main .follower img {
+  flex: 1;
+}
+body main .follower h2 {
+  flex: 1.2;
+  font-size: 35px;
+  line-height: 0.9;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: rgb(255, 255, 255);
+}
+body main .audience {
+  grid-area: audience;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+}
+body main .audience span {
+  font-size: 60px;
+  font-weight: 500;
+}
+body main .audience p {
+  color: rgb(18, 18, 18);
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+body main .audience img {
+  width: 90%;
+}
+body main .create {
+  grid-area: create;
+  background-color: rgb(249, 238, 225);
+  color: rgb(18, 18, 18);
+  padding-top: 50px;
+}
+body main .create h2 {
+  font-size: 35px;
+  line-height: 0.9;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+body main .create h2 em {
+  display: block;
+  color: rgb(118, 80, 220);
+}
+body main .create img {
+  display: block;
+  margin: 20px 0;
+  width: 150px;
+}
+body main .content-ai {
+  grid-area: content-ai;
+  background-color: rgb(255, 203, 107);
+}
+body main .content-ai h2 {
+  font-size: 35px;
+  line-height: 0.9;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+body main .content-ai img {
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 8px;
+}
+
+@media (max-width: 1000px) {
+  body main {
+    width: 90%;
+  }
+}
+@media (max-width: 800px) {
+  body main {
+    grid-template-areas: "social social account account" "maintain maintain schedule schedule" "follower follower audience audience" "create create content-ai content-ai";
+  }
+}
+@media (max-width: 600px) {
+  body main {
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-areas: "social" "account" "maintain" "schedule" "follower" "audience" "create" "content-ai";
+    gap: 25px;
+  }
+  body main .social h1 {
+    font-size: 45px;
+    line-height: 0.9;
+  }
+  body main .account {
+    padding: 22px;
+  }
+  body main .account div img {
+    width: 100%;
+  }
+  body main .account h2 {
+    font-size: 24px;
+    padding-right: 0;
+  }
+  body main .maintain {
+    padding: 22px;
+  }
+  body main .maintain h2 {
+    font-size: 24px;
+  }
+  body main .maintain div img {
+    width: 70%;
+  }
+  body main .schedule {
+    padding: 22px 12px;
+  }
+  body main .schedule h2 {
+    font-size: 24px;
+    padding-right: 0;
+    text-align: center;
+  }
+  body main .schedule div {
+    margin: 20px 0;
+  }
+  body main .schedule div img {
+    width: 100%;
+  }
+  body main .schedule p {
+    text-align: center;
+    padding: 0 10px;
+  }
+  body main .follower {
+    padding: 22px;
+    flex-direction: column;
+    text-align: center;
+  }
+  body main .follower img {
+    width: 100%;
+  }
+  body main .follower h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    padding: 0 40px;
+  }
+  body main .audience {
+    padding: 22px;
+  }
+  body main .audience span {
+    font-size: 45px;
+  }
+  body main .audience p {
+    margin-bottom: 15px;
+  }
+  body main .audience img {
+    width: 60%;
+  }
+  body main .create {
+    padding: 22px;
+  }
+  body main .create h2 {
+    font-size: 24px;
+  }
+  body main .create h2 em {
+    display: inline;
+  }
+  body main .create img {
+    margin-bottom: 0;
+  }
+  body main .content-ai {
+    padding: 22px;
+  }
+  body main .content-ai h2 {
+    font-size: 28px;
+  }
+  body main .content-ai img {
+    width: 70%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,339 @@
+// colors
+$Purple100: rgb(218, 207, 252);
+$Purple500: rgb(118, 80, 220);
+$Yellow100: rgb(249, 238, 225);
+$Yellow500: rgb(255, 203, 107);
+$White: rgb(255, 255, 255);
+$Black: rgb(18, 18, 18);
+
+// D Sans Font
+$DmFont: "DM Sans", sans-serif;
+
+// Paragraph Size
+$mainSize: 18px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100px;
+}
+
+
+body {
+    font-family: $DmFont;
+    background-color: #f7f5f5;
+    main {
+        width: 75%;
+        margin: 80px auto;
+        display: grid;
+        grid-template-areas:
+                'create create create social social social social social social schedule schedule schedule'
+                'create create create social social social social social social schedule schedule schedule'
+                'create create create account account account maintain maintain maintain schedule schedule schedule'
+                'content-ai content-ai content-ai account account account maintain maintain maintain schedule schedule schedule'
+                'content-ai content-ai content-ai audience audience audience follower follower follower follower follower follower'
+                'content-ai content-ai content-ai audience audience audience follower follower follower follower follower follower';
+        gap: 25px;
+        .grid {
+            border-radius: 10px;
+            padding: 22px;
+        }
+        .social {
+            grid-area: social;
+            background-color: $Purple500;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 32px;
+            h1 {
+                font-size: 46px;
+                color: $White;
+                font-weight: 400;
+                span {
+                    color: $Yellow500;
+                }
+            }
+            img {
+                display: block;
+                margin: 10px auto 7px;
+                width: 150px;
+            }
+            small {
+                display: block;
+                color: $Yellow100;
+            }
+        }
+        .account {
+            grid-area: account;
+            background-color: #ffffff;
+            padding-right: 0;
+            padding-bottom: 0;
+            div {
+                margin-bottom: 10px;
+                overflow-x: hidden;
+                img {
+                    width: 136%;
+                }
+            }
+            h2 {
+                font-size: 32px;
+                line-height: 0.9;
+                font-weight: 500;
+                letter-spacing: -1.5px;
+                padding-right: 20px;
+            }
+        }
+        .maintain {
+            grid-area: maintain;
+            background-color: $Yellow500;
+            padding-bottom: 0;
+            h2 {
+                font-size: 32px;
+                line-height: 0.9;
+                font-weight: 500;
+                letter-spacing: -2px;
+                margin-bottom: 18px;
+            }
+            div {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .schedule {
+            grid-area: schedule;
+            background-color: $Purple100;
+            padding: 40px 0px 40px 25px;
+            h2 {
+                font-size: 32px;
+                line-height: 0.9;
+                font-weight: 500;
+                letter-spacing: -1.5px;
+                padding-right: 40px;
+            }
+            div {
+                margin-top: 30px;
+                margin-bottom: 30px;
+                overflow-x: hidden;
+                img {
+                    display: block;
+                    width: 160%;
+                }
+            }
+            p {
+                color: $Black;
+                line-height: 1.2;
+                font-weight: 500;
+                padding-right: 30px;
+            }
+        }
+        .follower {
+            grid-area: follower;
+            background-color: $Purple500;
+            display: flex;
+            align-items: center;
+            img {
+                flex: 1;
+            }
+            h2 {
+                flex: 1.2;
+                font-size: 35px;
+                line-height: 0.9;
+                font-weight: 400;
+                letter-spacing: 0px;
+                color: $White;
+            }
+        }
+        .audience {
+            grid-area: audience;
+            background-color: $White;
+            padding: 20px;
+            span {
+                font-size: 60px;
+                font-weight: 500;
+            }
+            p {
+                color: $Black;
+                line-height: 1.2;
+                font-weight: 500;
+                margin-bottom: 25px;
+            }
+            img {
+                width: 90%;
+            }
+        }
+        .create {
+            grid-area: create;
+            background-color: $Yellow100;
+            color: $Black;
+            padding-top: 50px;
+            h2 {
+                font-size: 35px;
+                line-height: 0.9;
+                font-weight: 500;
+                letter-spacing: -2px;
+                em {
+                    display: block;
+                    color: $Purple500;
+                }
+            }
+            img {
+                display: block;
+                margin: 20px 0;
+                width: 150px;
+            }
+        }
+        .content-ai {
+            grid-area: content-ai;   
+            background-color: $Yellow500;   
+            h2 {
+                font-size: 35px;
+                line-height: 0.9;
+                font-weight: 500;
+                letter-spacing: -2px;
+            }     
+            img {
+                display: block;
+                width: 100%;
+                margin-top: 40px;
+                margin-left: 8px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        main {
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        main {
+            grid-template-areas:
+                    'social social account account'
+                    'maintain maintain schedule schedule'
+                    'follower follower audience audience'
+                    'create create content-ai content-ai'
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        main {
+            width: 90%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-areas:
+                    'social'
+                    'account'
+                    'maintain'
+                    'schedule'
+                    'follower'
+                    'audience'
+                    'create'
+                    'content-ai';
+            gap: 25px;
+            .social {
+                h1 {
+                    font-size: 45px;
+                    line-height: 0.9;
+                }
+            }
+            .account {
+                padding: 22px;
+                div {
+                    img {
+                        width: 100%;
+                    }
+                }
+                h2 {
+                    font-size: 24px;
+                    padding-right: 0;
+                }
+            }
+            .maintain {
+                padding: 22px;
+                h2 {
+                    font-size: 24px;
+                }
+                div {
+                    img {
+                        width: 70%;
+                    }
+                }
+            }
+            .schedule {
+                padding: 22px 12px;
+                h2 {
+                    font-size: 24px;
+                    padding-right: 0;
+                    text-align: center;
+                }
+                div {
+                    margin: 20px 0;
+                    img {
+                        width: 100%;
+                    }
+                }
+                p {
+                    text-align: center;
+                    padding: 0 10px;
+                }
+            }
+            .follower {
+                padding: 22px;
+                flex-direction: column;
+                text-align: center;
+                img {
+                    width: 100%;
+                }
+                h2 {
+                    font-size: 24px;
+                    margin-top: 20px;
+                    padding: 0 40px;
+                }
+            }
+            .audience {
+                padding: 22px;
+                span {
+                    font-size: 45px;
+                }
+                p {
+                    margin-bottom: 15px;
+                }
+                img {
+                    width: 60%;
+                }
+            }
+            .create {
+                padding: 22px;
+                h2 {
+                    font-size: 24px;
+                    em {
+                        display: inline;
+                    }
+                }
+                img {
+                    margin-bottom: 0;
+                }
+            }
+            .content-ai {
+                padding: 22px;
+                h2 {
+                    font-size: 28px;
+                }
+                img {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
